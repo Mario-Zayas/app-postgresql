@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Juegos - Inicio{% endblock %}
+{% block content %}
+<div class="posts">
+    <h1 class="content-subhead">Flask</h1>
+
+    <!-- A single blog post -->
+    <section class="post">
+        <header class="post-header">
+            
+
+            <h2 class="post-title">Página Principal</h2>
+
+            <p class="post-meta">
+                By <a href="#" class="post-author">Mario Zayas García</a> hecho con <a class="post-category post-category-design" href="#">Html</a> <a class="post-category post-category-pure" href="#">Flask</a> <a class="post-category post-category-css" href="#">CSS</a> 
+            </p>
+        </header>
+
+        <div class="post-description">
+            </ul>
+            <h1>Para ir a juegos pulsa el simbolo MSX</h1>
+            <form action="juegos" method="GET">
+                <a href = "/juegos"><img src="../static/img/msx.jpg" width="350" height="352">
+                    
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock %}
