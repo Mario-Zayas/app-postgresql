@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Juegos</h1>
+
+  <form method="post" action="{{ url_for('juegos') }}">
+    <label for="nombre">Buscar juego:</label>
+    <input type="text" name="nombre" id="nombre">
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if juegos_encontrados %}
+    <h2>Resultados de la búsqueda:</h2>
+    <ul>
+      {% for juego in juegos_encontrados %}
+      <tr>
+          <td>{{ juego.nombre }}</td>
+          <td>{{ juego.desarrollador }}</td>
+          <td><a href="/juego/{{ juego.id }}">Detalles del juego</a></td>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <ul style="padding: 0 20px">
+        {% for juego in juegos %}
+        <li style="margin-bottom: 10px">
+          <span>{{ juego.nombre }}   | </span>
+          <span>{{ juego.desarrollador }}   | </span>
+          <a href="/juego/{{ juego.id }}">Detalles del juego</a>
+        </li>
+        {% endfor %}
+      </ul>
+  {% endif %}
+{% endblock %}
+
+
