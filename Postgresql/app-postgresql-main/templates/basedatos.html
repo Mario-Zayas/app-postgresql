@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+          <div class="tm-page-col-right tm-tab-contents">
+            <div id="first-tab-group" class="tabgroup">
+              <div id="tab1">
+                <div class="text-content">
+                  <h1 class="tm-text-secondary tm-mb-5">
+                     Tablas de la base de datos Scott:
+                  </h1>
+                  <p>
+                    Tablas definidas:
+                  </p>
+                  <ul>
+                    {% for tabla in tablas %}
+                    <li>{{ tabla }}</li>
+                    {% endfor %}
+                  </ul>
+                  <p>
+                    Datos de la tabla "emp":
+                  </p>
+                  <ul>
+                    {% for emp in empno %}
+                    <li>{{ emp }}</li>
+                    {% endfor %}
+                  </ul>
+                  <br/><br/>
+                  <p>
+                    Datos de la tabla "dept":
+                  </p>
+                  <ul>
+                    {% for dept in deptno %}
+                    <li>{{ dept }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{% endblock %}
+
+

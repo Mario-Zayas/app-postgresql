@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}APP PostgreSQL{% endblock %}
+
+{% block content %}
+<section class="row tm-pt-4 tm-pb-6">
+  <div class="col-12 tm-page-cols-container">
+    <div class="tm-page-col-right">
+      <h2 class="tm-text-secondary tm-mb-5">
+      PostgreSQL | Base de datos Scott
+      </h2>
+      <strong>Aplicación creada por Mario Zayas García</strong>
+      <p class="post-meta">
+        By <a href="#" class="post-author">Mario Zayas García</a> hecho con <a class="post-category post-category-design" href="#">Html</a> <a class="post-category post-category-pure" href="#">Flask</a> <a class="post-category post-category-css" href="#">CSS</a> 
+      </p>
+      </header>
+      <br/><br/>
+      <br/><br/>
+      <br/><br/>
+      <br/><img src="../static/img/postgres-logo.png" width="500" height="352"><br/>
+      <main>
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+            <div>
+              <label for="username"></label>
+              <input type="text" name="username" id="username" placeholder="Username (obligatorio)" autofocus required>
+            </div>
+             <div>
+              <label for=""></label>
+              <input type="password" name="password" id="password" placeholder="Password (obligatorio)" required>
+            </div>
+            </div>
+          <input type="submit" value="Iniciar Sesion"></input>
+          </form>
+      </main>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

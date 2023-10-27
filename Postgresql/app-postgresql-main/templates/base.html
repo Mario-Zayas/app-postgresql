@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/pure/pure-min.css">
+    <link rel="stylesheet" href="/static/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h2 class="brand-title">PostgreSQL Proyecto</h2>
+            <h3 class="brand-tagline">Proyecto de Flask con PostgreSQL</h3>
+        </div>
+    </div>
+	
+    <div class="content pure-u-1 pure-u-md-3-4">
+		<div class="pure-menu pure-menu-horizontal">
+				</li>
+			</ul>
+		</div>
+        <div>
+            {% block content %}{% endblock %}
+          
+
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item"><a href="https://educacionadistancia.juntadeandalucia.es/centros/sevilla/my/" class="pure-menu-link">Sobre mi</a></li>
+                        <li class="pure-menu-item"><a href="https://github.com/Mario-Zayas/app-postgresql" class="pure-menu-link">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
